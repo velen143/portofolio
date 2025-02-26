@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Katibeh&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+  <div class="flex h-full ">
+    <!-- Bagian Kiri (Tetap, Tidak Bisa Di-scroll) -->
+    <div class="hidden lg:block w-[70%] h-full fixed left-0 top-0 bg-cover">
+      <div id="section-3" class="relative w-full h-screen">
+        <div class="relative w-full h-screen z-0">
+          <div
+            class="slide-6 absolute w-full h-screen opacity-0 transition-opacity duration-1000 ease-in-out"
+          >
+            <img
+              src="./images/fotohome2.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="slide-6 absolute w-full h-screen opacity-0 transition-opacity duration-1000 ease-in-out"
+          >
+            <img
+              src="./images/fotohome5.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="slide-6 absolute w-full h-screen opacity-0 transition-opacity duration-1000 ease-in-out"
+          >
+            <img
+              src="./images/fotohome6.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <div
+          class="fixed absolut z-20 p-6 items-center text-center left-96 h-[350px] w-[578px]"
+          style="
+            background-image: url('./images/rectangle.png');
+            top: 82%;
+            transform: translateY(-51%);
+          "
+        >
+          <p class="font-josefin text-3xl text-[#6F4E37]">Kepada Yth</p>
+          <h2 class="font-katibeh text-6xl font-semibold mt-2 text-[#6F4E37]">
+            Nama Tamu
+          </h2>
+          <p class="font-josefin text-3xl text-[#6F4E37] whitespace-pre-line">
+            Kehadiran dan doa restu dari Bapak/Ibu/Saudara/i merupakan harapan
+            terbesar kami.
+          </p>
+        </div>
+            
+      </div>
+    </div> 
+    
+    <!--Pengaturan musik-->
+    <div
+    class="lg:block hidden sm:hidden md:hidden fixed justify-center bg-cover bg-center z-30  flex-col items-center space-y-8  w-[80px] h-[550px] left-[68%] top-40"
+  >
+    <div class="relative w-[80px] h-[80px] top-8 flex items-center justify-center">
+      <!-- Tombol Musik On -->
+      <button
+        id="musicOn"
+        class="absolute text-white p-4 rounded-full shadow-lg"
+      >
+        <img src="./images/buttonOn.png" class="w-[60px] h-[60px]" alt="On" />
+      </button>
+      <!-- Tombol Musik Off -->
+      <button
+        id="musicOff"
+        class="absolute hidden text-white p-4 rounded-full shadow-lg"
+      >
+        <img src="./images/buttonOff.png" class="w-[60px] h-[60px]" alt="Off" />
+      </button>
+    </div>
+    <!-- Elemen Audio -->
+    <audio id="backgroundMusic" loop>
+      <source src="./images/lagu.mp3" type="audio/mp3" />
+    </audio>
+  </div>
+
+  <div
+    class="lg:block hidden sm:hidden md:hidden fixed  justify-center bg-cover bg-center z-30 bottom-24  flex-col items-center space-y-8 w-[80px] h-[550px] left-[68%]"
+    style="
+      background-image: url(./images/bgbutton.png);
+      background-position: center;
+    "
+  >
+    <button id="#home" class="group flex flex-col items-center pt-10 pl-2 text-[#6F4E37]">
+      <div
+        class="w-16 h-16 rounded-full flex items-center justify-center hover:bg-white"
+      >
+        <img src="./images/iconhome.png" class="w-30 h-30" alt="Home" />
+      </div>
+      <span
+        class="text-xl font-bold font-color font-josefin hidden group-hover:block"
+        >Home</span
+      >
+    </button>
+    <button id="#couple" class="group flex flex-col items-center pl-2 text-[#6F4E37]">
+      <div
+        class="w-16 h-16 rounded-full flex items-center justify-center hover:bg-white"
+      >
+        <a href="#couple">
+          <img src="./images/iconcouple.png" class="w-30 h-30" alt="Home" />
+        </a>
+      </div>
+      <span
+        class="text-xl font-bold font-color font-josefin hidden group-hover:block"
+        >Couple</span
+      >
+    </button>
+    <button class="group flex flex-col items-center pl-2 text-[#6F4E37]">
+      <div
+        class="w-16 h-16 rounded-full flex items-center justify-center hover:bg-white"
+      >
+        <a href="#savedate">
+          <img src="./images/icondate.png" class="w-30 h-30" alt="Home" />
+        </a>
+      </div>
+      <span
+        class="text-xl font-bold font-color font-josefin hidden group-hover:block"
+        >Date</span
+      >
+    </button>
+    <button class="group flex flex-col items-center pl-2 text-[#6F4E37]">
+      <div
+        class="w-16 h-16 rounded-full flex items-center justify-center hover:bg-white"
+      >
+        <a href="#gallery">
+          <img
+            src="./images/icongallery.png"
+            class="w-30 h-30"
+            alt="Home"
+          />
+        </a>
+      </div>
+      <span
+        class="text-xl font-bold font-color font-josefin hidden group-hover:block"
+        >Gallery</span
+      >
+    </button>
+    <button class="group flex flex-col items-center pl-2 text-[#6F4E37]">
+      <div
+        class="w-16 h-16 rounded-full flex items-center justify-center hover:bg-white"
+      >
+        <a href="#wish">
+          <img src="./images/iconwishes.png" class="w-30 h-30" alt="Home" />
+        </a>
+      </div>
+      <span
+        class="text-xl font-bold font-color font-josefin hidden group-hover:block"
+        >Wishes</span
+      >
+    </button>
+  </div>
+    
+
+    <!--bagian kanan-->
+    <div class="overflow-x-hidden overflow-y-hidden left-0 h-full lg:ml-[70%]">
+    
+
+      <!-- Section 1 -->
+      <div class="relative w-full h-full">
+        <div
+          class="w-full h-screen bg-[url('../images/home3.png')] flex flex-col items-center justify-between"
+        >
+          <div class="w-full flex items-center justify-between">
+            <img src="./images/ataskiri.png" class="w-[50%]" alt="" />
+            <img src="./images/ataskanan.png" class="w-[50%]" alt="" />
+          </div>
+          <div
+            class="absolute top-[2%] w-full h-screen flex flex-col items-center justify-center space-y-4"
+          >
+            <div
+              class="w-[60%] text-center text-white/70 text-[20px] font-josefin leading-[20px] font-light"
+            >
+              Dengan penuh rasa syukur kami bermaksud mengundang Bapak/Ibu untuk
+              menghadiri acara pernikahan kami
+            </div>
+            <img src="./images/foto1.png" class="w-[50%]" alt="" />
+            <span class="font-beaurivage text-white text-[45px]"
+              >Randi & Shani</span
+            >
+            <div class="flex space-x-1" id="countdown-timer">
+              <div class="w-[60px] relative" data-label="Hari">
+                <img src="./images/kotakwaktu.png" alt="" />
+                <div
+                  class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[#6F4E37] text-[30px] font-katibeh flex flex-col items-center justify-center leading-7"
+                >
+                  <span class="value">00</span>
+                  <span class="label pb-[10px]">Hari</span>
+                </div>
+              </div>
+              <div class="w-[60px] relative" data-label="Jam">
+                <img src="./images/kotakwaktu.png" alt="" />
+                <div
+                  class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[#6F4E37] text-[30px] font-katibeh flex flex-col items-center justify-center leading-7"
+                >
+                  <span class="value">00</span>
+                  <span class="label pb-[10px]">Jam</span>
+                </div>
+              </div>
+              <div class="w-[60px] relative" data-label="Menit">
+                <img src="./images/kotakwaktu.png" alt="" />
+                <div
+                  class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[#6F4E37] text-[30px] font-katibeh flex flex-col items-center justify-center leading-7"
+                >
+                  <span class="value">00</span>
+                  <span class="label pb-[10px]">Menit</span>
+                </div>
+              </div>
+              <div class="w-[60px] relative" data-label="Detik">
+                <img src="./images/kotakwaktu.png" alt="" />
+                <div
+                  class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[#6F4E37] text-[30px] font-katibeh flex flex-col items-center justify-center leading-7"
+                >
+                  <span class="value">00</span>
+                  <span class="label pb-[10px]">Detik</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute -bottom-[70px] z-10 w-full flex items-center justify-between"
+          >
+            <img src="./images/iconkiri1.png" class="w-[55%] ml-[-24px]" alt="" />
+            <img src="./images/iconkanan1.png" class="w-[55%] mr-[-16px]" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div id="section-2" class="relative w-full h-screen">
+        <div class="relative w-full h-screen z-0">
+          <div
+            class="slide absolute w-full h-screen opacity-0 transition-opacity duration-1000 ease-in-out"
+          >
+            <img
+              src="./images/fotohome1.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="slide absolute w-full h-screen opacity-0 transition-opacity duration-1000 ease-in-out"
+          >
+            <img
+              src="./images/fotohome3.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="slide absolute w-full h-screen opacity-0 transition-opacity duration-1000 ease-in-out"
+          >
+            <img
+              src="./images/cover.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <div
+          class="absolute w-full top-0 left-0 right-0 z-10 h-screen flex items-center justify-center"
+        >
+          <div
+            class="w-[350px] text-center flex flex-col space-y-3 leading-[20px] text-white/80"
+          >
+            <span class="font-josefin font-light text-[20px]">
+              Sabar lan syukur iku dhasar panguripan kang bahagia. Muga-muga jodoh
+              iki tansah tinuntun kaluhuran.
+            </span>
+            <span class="font-josefin font-light text-[20px]">
+              “Kesabaran dan rasa syukur adalah dasar hidup yang bahagia. Semoga
+              jodoh ini selalu dituntun dalam kebaikan”
+            </span>
+          </div>
+        </div>
+        <div
+          class="absolute -bottom-[70px] z-10 w-full flex items-center justify-between"
+        >
+        <img src="./images/iconkiri1.png" class="w-[55%] ml-[-24px]" alt="" />
+        <img src="./images/iconkanan1.png" class="w-[55%] mr-[-16px]" alt="" />
+        </div>
+      </div>
+      
+      <!-- Section 3 -->
+      <div id="couple" class="relative w-full h-screen">
+        <div class="relative w-full h-screen z-0">
+          <div
+            class="slide-2 absolute w-full h-screen opacity-0 transition-opacity duration-1000 ease-in-out"
+          >
+            <img
+              src="./images/fotohome1.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="slide-2 absolute w-full h-screen opacity-0 transition-opacity duration-1000 ease-in-out"
+          >
+            <img
+              src="./images/fotohome3.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="slide-2 absolute w-full h-screen opacity-0 transition-opacity duration-1000 ease-in-out"
+          >
+            <img
+              src="./images/cover.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <div
+          class="absolute w-full top-0 left-0 right-0 z-10 h-screen flex items-center justify-center"
+        >
+          <div
+            class="w-[250px] text-center flex flex-col space-y-6 text-white/80"
+          >
+            <span class="font-beaurivage font-light text-[40px] tracking-wider">
+              The Wedding Of
+            </span>
+            <span class="font-beaurivage font-light text-[30px]">
+              Randy Setya Budi
+            </span>
+            <span class="font-beaurivage font-light text-[20px] tracking-wider">
+              Putra Kedua dari
+            </span>
+            <span class="font-josefin font-bold text-[20px] tracking-wider">
+              Bapak Ir. Suharyadi & Ibu Hj. Syarifah
+            </span>
+            <span class="font-beaurivage font-light text-[30px]">&</span>
+            <span class="font-beaurivage font-light text-[30px]">
+              Shani senjani
+            </span>
+            <span class="font-beaurivage font-light text-[20px]">
+              Putri Bungsu dari
+            </span>
+            <span class="font-josefin font-bold text-[20px]"
+              >Bapak Ir. Suharyadi & Ibu Hj. Syarifah</span
+            >
+          </div>
+        </div>
+        <div
+          class="absolute -bottom-[70px] z-10 w-full flex items-center justify-between"
+        >
+        <img src="./images/iconkiri1.png" class="w-[55%] ml-[-24px]" alt="" />
+        <img src="./images/iconkanan1.png" class="w-[55%] mr-[-16px]" alt="" />
+        </div>
+      </div>
+
+      <!-- Section : Find US -->
+      <div id="section-findus" class="relative w-full h-[820px] lg:h-[900px] ">
+        <div
+          class="relative w-full h-[820px] lg:h-[900px] z-0 bg-[url('../images/home3.png')] px-10 py-4 flex flex-col items-center">
+          <h1 class="font-beaurivage text-[50px] text-white mb-10 mt-20">
+            Find Us
+          </h1>
+          <div class="columns-2 ">
+            <div class="grid grid-rows-3 grid-flow-col gap-4 translate-y-4">
+              <div class="col-span-2">
+                <img
+                class="mb-4 transition-transform duration-300 hover:scale-110"
+                src="./images/buttonfindus.png"
+              />
+              </div>
+              <div class="row-span-2 col-span-2 ">
+                <img
+                class="mb-4 transition-transform duration-300 hover:scale-110"
+                src="./images/buttonfindus.png"
+              />
+              </div>
+            </div>
+            <div class="lg:mt-16 mt-4">
+              <img
+                class="mb-4 translate-y-8 transition-transform duration-300 hover:scale-110"
+                src="./images/fotoshani.png"
+                />
+              <h1 class="absolute translate-y-4 text-center font-beaurivage text-white ml-6 text-[30px]">Shani Senjani</h1>
+            </div>
+            <div >
+              <img
+                class="mb-4 transition-transform duration-300 hover:scale-110"
+                src="./images/fotorandy.png"
+              />
+              <h1 class="absolute text-center -translate-y-3  font-beaurivage text-white lg:ml-2  text-[30px]">Randy Setya Budi</h1>
+            </div>
+            <div class="grid grid-rows-3 grid-flow-col translate-x-8 translate-y-24 ">
+              <div class="col-span-2">
+                <img
+                class="mb-4 transition-transform duration-300 hover:scale-110"
+                src="./images/buttonfindus.png"
+              />
+              </div>
+              <div class="row-span-2 col-span-2 ">
+                <img
+                class="mb-4 transition-transform duration-300 hover:scale-110"
+                src="./images/buttonfindus.png"
+              />
+              <div class="row-span-2 col-span-2 ">
+                <img
+                class="mb-4 transition-transform duration-300 hover:scale-110"
+                src="./images/buttonfindus.png"
+              />
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div
+          class="absolute -bottom-[70px] z-10 w-full flex items-center justify-between"
+        >
+        <img src="./images/iconkiri1.png" class="w-[55%] ml-[-24px]" alt="" />
+        <img src="./images/iconkanan1.png" class="w-[55%] mr-[-16px]" alt="" />
+        </div>
+      </div>
+
+      <!-- Section : Save date-->
+      <div id="savedate" class="relative w-full h-[1270px]">
+        <div class="relative w-full h-[1250px] z-0">
+          <div
+            class="slide-3 absolute w-full h-[1250px] opacity-0 transition-opacity duration-1000 ease-in-out"
+          >
+            <img
+              src="./images/fotohome1.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="slide-3 absolute w-full h-[1250px] opacity-0 transition-opacity duration-1000 ease-in-out"
+          >
+            <img
+              src="./images/fotohome3.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="slide-3 absolute w-full h-[1250px] opacity-0 transition-opacity duration-1000 ease-in-out"
+          >
+            <img
+              src="./images/cover.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <div
+          class="absolute w-full top-0 left-0 right-0 z-10 h-[1200px] flex items-center justify-center"
+        >
+          <div
+            class="w-[350px] text-center flex flex-col space-y-4 text-white/80"
+          >
+            <span class="font-beaurivage font-light text-[40px] tracking-wider">
+              Save The Date
+            </span>
+            <span class="font-katibeh font-bold text-[40px]">
+              Akad
+            </span>
+            <span class="font-josefin font-bold text-[20px] ">
+              Jum'at, 30 Oktober 2024
+            </span>
+            <span class="font-josefin font-light text-[20px]">
+              Rumah Mendingan Jenderal Ahmad Yani :
+              Jln Jendral Ahmad Yani No 27, Meguwo
+              Yogyakarta
+            </span>
+            <span class="font-josefin font-light text-[20px]">
+              Pukul 08.00 - 11.00 WIB
+            </span>
+            <!--untuk non premium-->
+            <button class="items-center ml-20">
+              <img src="./images/buttonlokasi.png">
+            </button>
+            <div class="w-[250px] h-[150px] items-center p-6">
+              <iframe
+                class="rounded-lg"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019126061796!2d144.95592701531863!3d-37.81720997975169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5778b1da9f02e94!2sGoogle!5e0!3m2!1sen!2sid!4v1699999999999!5m2!1sen!2sid">
+              </iframe>
+            </div>
+            <span class="font-katibeh font-bold text-[40px]">
+              Resepsi
+            </span>
+            <span class="font-josefin font-bold text-[20px]">
+              Minggu, 1 November 2024
+            </span>
+            <span class="font-josefin font-light text-[20px]">
+              Royal Ambarukmo 
+              Jln Solo KM 20, Janti Yogyakarta
+            </span>
+            <span class="font-josefin font-light text-[20px]">
+              Pukul 08.00 - 11.00 WIB
+            </span>
+            <!--untuk non premium-->
+            <button class="items-center ml-20">
+              <img src="./images/buttonlokasi.png">
+            </button>
+            <div class="w-[250px] h-[150px] items-center p-6">
+              <iframe
+                class="rounded-lg"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019126061796!2d144.95592701531863!3d-37.81720997975169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5778b1da9f02e94!2sGoogle!5e0!3m2!1sen!2sid!4v1699999999999!5m2!1sen!2sid">
+              </iframe>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute -bottom-[70px] z-10 w-full flex items-center justify-between"
+        >
+        <img src="./images/iconkiri1.png" class="w-[55%] ml-[-24px]" alt="" />
+        <img src="./images/iconkanan1.png" class="w-[55%] mr-[-16px]" alt="" />
+        </div>
+      </div>
+
+      <!-- Section : Our Story-->
+      <div id="section-ourstory" class="relative w-full h-full">
+        <div
+          class="relative w-full h-[1350px] z-0 bg-[url('../images/home3.png')] px-10 py-4 flex flex-col items-center"
+        >
+          <h1 class="font-beaurivage text-[50px] text-white mb-5 mt-20">
+            Our Story
+          </h1>
+          <div class=" text-white w-[300px] items-center bg-orange-400 bg-opacity-40 rounded-lg">
+            <h1 class="font-josefin font-bold text-[20px] text-white ml-10 mb-2 mt-5">
+              Our Step First Together
+            </h1>
+            <img class="ml-3" src="./images/ourstory1.png" alt="" />
+            <p class="ml-7 w-[250px] font-josefin font-light text-[18px] tracking-wider text-center">
+              25 April 2015, Kami pertama kali bertemu pada sebuah acara seminar lima tahun lalu. Percakapan hangat saat itu menjadi awal dari hubungan kami
+            </p>
+          </div>
+          <div class=" text-white mt-4 w-[300px] items-center bg-orange-400 bg-opacity-40 rounded-lg">
+            <h1 class="font-josefin font-bold text-[20px] text-white ml-10 mb-2 mt-5">
+              Our Journey to Forever
+            </h1>
+            <img class="ml-3" src="./images/ourstory2.png" alt="" />
+            <p class="ml-7 w-[250px] font-josefin font-light text-[18px] tracking-wider text-center">
+              Setelah melalui perjalanan penuh cinta, kini kami siap melangkah ke jenjang berikutnya dan membangun kehidupan baru bersama sebagai suami istri.
+            </p>
+          </div>
+          
+        </div>
+        <div
+          class="absolute -bottom-[70px] z-10 w-full flex items-center justify-between"
+          >
+          <img src="./images/iconkiri1.png" class="w-[55%] ml-[-24px]" alt="" />
+          <img src="./images/iconkanan1.png" class="w-[55%] mr-[-16px]" alt="" />
+        </div>
+      </div>
+
+      <!-- Section : Gallery -->
+      <div id="gallery" class="relative w-full h-[950px] lg:h-[1000px]">
+        <div
+          class="relative w-full h-full z-0 bg-[url('../images/home3.png')] px-10 py-4 flex flex-col items-center"
+        >
+          <h1 class="font-beaurivage text-[50px] text-white mb-10 mt-20">
+            Gallery
+          </h1>
+          <div class="mb-8 -translate-y-6 w-[300px]" id="media-container">
+            <img src="./images/Group 222.png" alt="" id="video-toggle"/>
+            <video id="my-video" width="300" controls class="hidden">
+              <source src="./images/prewedding adat jawa.mp4" type="video/mp4">
+              Browser Anda tidak mendukung tag video.
+            </video>
+          </div>
+          <div id="gallery" class="overflow-y-auto scrollbar-none max-h-[50vh] p-2 -translate-y-10">
+            <div class="columns-2 lg:w-[300px]">
+              <img
+                class="mb-4 transition-transform duration-300 hover:scale-110"
+                src="./images/nrH1DKrb.png"
+              />
+              <img
+                class="mb-4 transition-transform duration-300 hover:scale-110"
+                src="./images/Frame 14.png"
+              />
+              <img
+                class="mb-4 transition-transform duration-300 hover:scale-110"
+                src="./images/Frame 15.png"
+              />
+              <img
+                class="mb-4 transition-transform duration-300 hover:scale-110"
+                src="./images/Frame 16.png"
+              />
+              <img
+                class="mb-4 transition-transform duration-300 hover:scale-110"
+                src="./images/Frame 17.png"
+              />
+              <img
+                class="mb-4 transition-transform duration-300 hover:scale-110"
+                src="./images/Frame 18.png"
+              />
+              <img
+                class="mb-4 transition-transform duration-300 hover:scale-110"
+                src="./images/Frame 19.png"
+              />
+              <img
+                class="mb-4 transition-transform duration-300 hover:scale-110"
+                src="./images/Frame 20.png"
+              />
+              <img
+                class="mb-4 transition-transform duration-300 hover:scale-110"
+                src="./images/Frame 23.png"
+              />
+              <img
+                class="mb-4 transition-transform duration-300 hover:scale-110"
+                src="./images/Frame 24.png"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute -bottom-[70px] z-10 w-full flex items-center justify-between"
+          >
+          <img src="./images/iconkiri1.png" class="w-[55%] ml-[-24px]" alt="" />
+          <img src="./images/iconkanan1.png" class="w-[55%] mr-[-16px]" alt="" />
+        </div>
+      </div>
+
+      <!-- Section : live streaming  -->
+      <div id="sectionlivestreaming" class="relative w-full h-screen">
+        <div class="relative w-full h-screen z-0">
+          <div
+            class="slide-4 absolute w-full h-screen opacity-0 transition-opacity duration-1000 ease-in-out"
+          >
+            <img
+              src="./images/fotohome1.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="slide-4 absolute w-full h-screen opacity-0 transition-opacity duration-1000 ease-in-out"
+          >
+            <img
+              src="./images/fotohome3.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="slide-4 absolute w-full h-screen opacity-0 transition-opacity duration-1000 ease-in-out"
+          >
+            <img
+              src="./images/cover.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <div
+          class="absolute w-full top-0 left-0 right-0 z-10 h-screen flex items-center justify-center"
+        >
+          <div
+            class="w-[350px] text-center flex flex-col space-y-3 leading-[20px] text-white/80"
+          >
+            <h1 class="font-beaurivage text-[40px] text-white mb-10 mt-20">
+              Live Streaming
+            </h1>
+            <span class="font-josefin font-light text-[20px]">
+              Untuk Bapak/Ibu yang berhalangan hadir karena keterbatasan jarak dan waktu, dengan hormat kami persilakan untuk mengklik tombol berikut guna menyaksikan acara kami melalui Live Streaming di YouTube
+            </span>
+            <button>
+              <img src="./images/buttonlive.png" class="w-[150px] ml-24" alt="" />
+            </button>
+          </div>
+        </div>
+        <div
+          class="absolute -bottom-[70px] z-10 w-full flex items-center justify-between"
+        >
+        <img src="./images/iconkiri1.png" class="w-[55%] ml-[-24px]" alt="" />
+        <img src="./images/iconkanan1.png" class="w-[55%] mr-[-16px]" alt="" />
+        </div>
+      </div>
+
+      <!-- Section : Wishes -->
+      <div id="wish" class="relative w-full h-[970px]">
+        <div
+          class="relative w-full h-[970px] z-0 bg-[url('../images/home3.png')] px-10 py-4 flex flex-col items-center">
+          <h1 class="font-beaurivage text-[50px] text-white mb-10 mt-20">
+            Wishes
+          </h1>
+          <div
+          class="w-[300px] -translate-y-6 text-center flex flex-col space-y-3 leading-[20px] text-white/80"
+          >
+            <span class="font-josefin font-light text-[20px]">
+              Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila, Bapak /  Ibu / Saudara / i. berkenan hadir untuk memberikan do'a restunya kami  ucapkan terimakasih.
+            </span>
+            <button id="openPopup">
+              <img src="./images/buttonwishes.png" class="w-[300px] items-center mb-2" alt="" />
+            </button>
+
+
+          </div>
+
+          <div id="popup" class="relative ml-4 -translate-y-16 inset-0 bg-black bg-opacity-50 justify-center hidden z-50 items-center">
+            <div class="bg-white rounded-lg shadow-lg w-11/12 max-w-md p-6 relative">
+              <!-- Tombol Close -->
+              <button id="closePopup" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800">
+                <img src="./images/close.png">
+              </button>
+              
+              <!-- Konten Pop-up -->
+              <h2 class="text-xl font-semibold text-center text-gray-800 mb-4 font-beaurivage">RSVP</h2>
+              <form>
+                <!-- Input Nama -->
+                <label for="nama" class="block text-sm font-medium text-gray-700 mb-1 font-josefin">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" class="w-full border border-gray-300 rounded-md px-3 py-2 mb-4 focus:ring-amber-500 focus:border-amber-500" placeholder="Nama Lengkap" required>
+        
+                <!-- Input Pesan -->
+                <label for="pesan" class="block text-sm font-medium text-gray-700 mb-1 font-josefin">Pesan & Harapan</label>
+                <textarea id="pesan" name="pesan" class="w-full border border-gray-300 rounded-md px-3 py-2 mb-4 focus:ring-amber-500 focus:border-amber-500" placeholder="Pesan & Harapan" rows="4"></textarea>
+        
+                <!-- Radio Buttons -->
+                <p class="text-sm font-medium text-gray-700 mb-2 font-josefin">Konfirmasi Kehadiran</p>
+                <div class="space-y-2 mb-4">
+                  <div class="flex items-center">
+                    <input type="radio" id="hadir" name="konfirmasi" value="hadir" class="text-amber-500 focus:ring-amber-500" required>
+                    <label for="hadir" class="ml-2 text-gray-700 font-josefin">Dengan senang hati, saya akan hadir.</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input type="radio" id="tidak-hadir" name="konfirmasi" value="tidak-hadir" class="text-amber-500 focus:ring-amber-500">
+                    <label for="tidak-hadir" class="ml-2 text-gray-700 font-josefin">Mohon maaf, saya tidak dapat menghadiri acara ini.</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input type="radio" id="mungkin" name="konfirmasi" value="mungkin" class="text-amber-500 focus:ring-amber-500">
+                    <label for="mungkin" class="ml-2 text-gray-700 font-josefin">Mungkin saya akan datang, semoga tidak ada halangan.</label>
+                  </div>
+                </div>
+        
+                <!-- Tombol Submit -->
+                <a href="#" class="">
+                  <img src="./images/konfirmasi.png" alt="Icon Produk Berkualitas" class="w-30 mx-auto pt-4">
+              </a>
+              </form>
+
+              <div id="thankYouMessage" class="hidden text-center">
+                <h2 class="text-2xl font-semibold text-gray-800">Terima Kasih Atas</h2>
+                <p class="text-lg italic text-gray-700">Konfirmasi <span class="font-bold">Anda</span></p>
+              </div>
+            </div>
+          </div>
+
+
+          <div id="card-wishes" class="overflow-y-auto scrollbar-none -translate-y-6 lg:w-[350px] max-h-[50vh] p-2 space-y-2 z-0">
+            <div class="bg-white border-l-8 pl-4 rounded-lg border-orange-700">
+              <h1 class="text-lg font-bold">Prananda Setya</h1>
+              <p class="text-gray-700">Selamat mas Randy dan mba Sinta, semoga jadi keluarga yang harmonis</p>
+              <h2 class="text-sm text-gray-500">2 hari lalu</h2>
+            </div>
+            
+            <div class="bg-white border-l-8 pl-4 rounded-lg border-orange-700">
+              <h1 class="text-lg font-bold">Prananda Setya</h1>
+              <p class="text-gray-700">Selamat mas Randy dan mba Sinta, semoga jadi keluarga yang harmonis</p>
+              <h2 class="text-sm text-gray-500">2 hari lalu</h2>
+            </div>
+            <div class="bg-white border-l-8 pl-4 rounded-lg border-orange-700">
+              <h1 class="text-lg font-bold">Prananda Setya</h1>
+              <p class="text-gray-700">Selamat mas Randy dan mba Sinta, semoga jadi keluarga yang harmonis</p>
+              <h2 class="text-sm text-gray-500">2 hari lalu</h2>
+            </div>
+            <div class="bg-white border-l-8 pl-4 rounded-lg border-orange-700">
+              <h1 class="text-lg font-bold">Prananda Setya</h1>
+              <p class="text-gray-700">Selamat mas Randy dan mba Sinta, semoga jadi keluarga yang harmonis</p>
+              <h2 class="text-sm text-gray-500">2 hari lalu</h2>
+            </div>
+            <div class="bg-white border-l-8 pl-4 rounded-lg border-orange-700">
+              <h1 class="text-lg font-bold">Prananda Setya</h1>
+              <p class="text-gray-700">Selamat mas Randy dan mba Sinta, semoga jadi keluarga yang harmonis</p>
+              <h2 class="text-sm text-gray-500">2 hari lalu</h2>
+            </div>
+          </div>
+        <div
+          class="absolute -bottom-[70px] z-10 w-full flex items-center justify-between"
+        >
+        <img src="./images/iconkiri1.png" class="w-[55%] ml-[-24px]" alt="" />
+        <img src="./images/iconkanan1.png" class="w-[55%] mr-[-16px]" alt="" />
+        </div>
+      </div>
+    </div>
+
+      <!-- Section : Gift -->
+      <div id="gift" class="relative w-full h-[950px]">
+        <div
+          class="relative w-full h-[950px] z-0 bg-[url('../images/home3.png')] px-10 py-4 flex flex-col items-center">
+          <h1 class="font-beaurivage text-[50px] text-white mb-10 mt-8">
+            Gift
+          </h1>
+          <div
+          class="w-[300px] text-center flex flex-col space-y-3 leading-[20px] text-white/80"
+          >
+            <button>
+              <img src="./images/gift1.png" class="w-[300px] items-center mb-2" alt="" />
+            </button>
+            <button>
+              <img src="./images/gift2.png" class="w-[300px] items-center mb-2" alt="" />
+            </button>
+          </div>
+        </div>
+        
+        <div
+          class="absolute -bottom-[70px] z-10 w-full flex items-center justify-between"
+        >
+        <img src="./images/iconkiri1.png" class="w-[55%] ml-[-24px]" alt="" />
+        <img src="./images/iconkanan1.png" class="w-[55%] mr-[-16px]" alt="" />
+        </div>
+      </div>
+      
+      <!-- Section : halaman terakhir  -->
+      <div id="sectionlivestreaming" class="relative w-full h-screen">
+        <div class="relative w-full h-screen z-0">
+          <div
+            class="slide-5 absolute w-full h-screen opacity-0 transition-opacity duration-1000 ease-in-out"
+          >
+            <img
+              src="./images/fotohome1.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="slide-5 absolute w-full h-screen opacity-0 transition-opacity duration-1000 ease-in-out"
+          >
+            <img
+              src="./images/fotohome3.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="slide-5 absolute w-full h-screen opacity-0 transition-opacity duration-1000 ease-in-out"
+          >
+            <img
+              src="./images/cover.png"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <div
+          class="absolute w-full top-0 left-0 right-0 z-10 h-screen flex items-center justify-center"
+        >
+          <div
+            class="w-[350px] text-center flex flex-col space-y-8 leading-[20px] text-white/80"
+          >
+            <span class="font-josefin font-light text-[20px]">
+              Besar harapan kami agar Bapak/Ibu/Sahabat/Sdr/i berkenan hadir dalam acara ini. Atas perhatian dan kehadirannya, kami ucapkan terima kasih yang sebesar-besarnya.
+            </span>
+            <span class="font-josefin font-light text-[20px]">
+              Turut Mengundang:
+              Sri Sultan Hamengkubuwono X dan keluarga besar Keraton Yogyakarta
+            </span>
+            <h1 class="font-beaurivage text-[40px] text-white mb-10 mt-20">
+              Randy & Shani
+            </h1>
+          </div>
+        </div>
+        <div
+          class="absolute -bottom-[40px] z-10 w-full flex items-center justify-between"
+        >
+        <img src="./images/bawahkiri.png" class="w-[55%] ml-[-24px]" alt="" />
+        <img src="./images/bawahkanan.png" class="w-[55%] mr-[-16px]" alt="" />
+        </div>
+        <div
+        class="flex sm:hidden lg:hidden fixed justify-center bg-cover bg-center z-30 bottom-2 ml-3 rounded-xl flex-row items-center space-x-6 w-[400px] h-[70px]  "
+        style="
+          background-image: url(./images/bgbutton.png);
+          background-position: center;
+        "
+      >
+        <button class="group flex flex-col items-center text-[#6F4E37]">
+          <div
+            class="w-14 h-14 rounded-full flex items-center justify-center hover:bg-white"
+          >
+            <img src="./images/iconhome.png" class="w-24 h-20" alt="Home" />
+          </div>
+          <span
+            class="text-sm font-bold font-color font-josefin hidden group-hover:block"
+            >Home</span
+          >
+        </button>
+        <button class="group flex flex-col items-center text-[#6F4E37]">
+          <div
+            class="w-14 h-14 rounded-full flex items-center justify-center hover:bg-white"
+          >
+            <a href="#couple">
+              <img src="./images/iconcouple.png" class="w-24 h-20" alt="Couple" />
+            </a>
+          </div>
+          <span
+            class="text-sm font-bold font-color font-josefin hidden group-hover:block"
+            >Couple</span
+          >
+        </button>
+        <button class="group flex flex-col items-center text-[#6F4E37]">
+          <div
+            class="w-14 h-14 rounded-full flex items-center justify-center hover:bg-white"
+          >
+            <a href="#savedate">
+              <img src="./images/icondate.png" class="w-24 h-20" alt="Date" />
+            </a>
+          </div>
+          <span
+            class="text-sm font-bold font-color font-josefin hidden group-hover:block"
+            >Date</span
+          >
+        </button>
+        <button class="group flex flex-col items-center text-[#6F4E37]">
+          <div
+            class="w-14 h-14 rounded-full flex items-center justify-center hover:bg-white"
+          >
+            <a href="#gallery">
+              <img src="./images/icongallery.png" class="w-24 h-20" alt="Gallery" />
+            </a>
+          </div>
+          <span
+            class="text-sm font-bold font-color font-josefin hidden group-hover:block"
+            >Gallery</span
+          >
+        </button>
+        <button class="group flex flex-col items-center text-[#6F4E37]">
+          <div
+            class="w-14 h-14 rounded-full flex items-center justify-center hover:bg-white"
+          >
+            <a href="#wish">
+              <img src="./images/iconwishes.png" class="w-24 h-20" alt="Wishes" />
+            </a>
+          </div>
+          <span
+            class="text-sm font-bold font-color font-josefin hidden group-hover:block"
+            >wishes</span
+          >
+        </button>
+      </div>
+      
+      </div>
+
+      
+
+         <!--Pengaturan musik-->
+      <div
+        class="lg:hidden fixed justify-center bg-cover bg-center z-30  flex-col items-center space-y-8  w-[80px] h-[550px] left-[82%] top-16"
+      >
+        <!-- Tombol Musik -->
+        <button
+          id="musicOn"
+          class="hidden text-white p-4  shadow-lg focus:outline-none"
+        >
+          <!-- Ikon Musik On -->
+          <img src="./images/buttonOn.png" class="w-[40px] h-[40px]" />
+        </button>
+        <button
+          id="musicOff"
+          class="text-white p-4 shadow-lg focus:outline-none"
+        >
+          <img src="./images/buttonOff.png" class="w-[60px] h-[60px]" />
+        </button>
+        <!-- Elemen Audio -->
+        <audio id="backgroundMusic" loop>
+          <source src="./images/lagu.mp3" type="audio/mp3" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+  
+
+     
+    </div>
+  </div>
+ 
+  
+  
+ 
+
+
+    <script src="./src/script.js"></script>
+  </body>
+</html>
