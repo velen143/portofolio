@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oleh-Oleh Nusantara</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @keyframes bounceUp {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="w-full px-4 md:px-20 py-4">
+            <div class="flex justify-between items-center h-16 px-2">
+                <div class="flex items-center space-x-4 pl-0 md:pl-10">
+                    <img src="./images/logo1.png" alt="Produk 1" class="w-12 h-12 object-cover rounded-md">
+                    <a href="#" class="text-yellow-500 text-2xl font-bold">Solo Flossroll</a>
+                </div>
+                <div class="hidden md:flex space-x-6 pr-2">
+                    <a href="#why-choose-us" class="text-gray-800 hover:text-yellow-500">Tentang Kami</a>
+                    <a href="#produk" class="text-gray-800 hover:text-yellow-500">Produk</a>
+                    <a href="#testimoni" class="text-gray-800 hover:text-yellow-500">Testimoni</a>
+                    <a href="#kantor" class="text-gray-800 hover:text-yellow-500">Kantor Cabang</a>
+                    <a href="#qna" class="text-gray-800 hover:text-yellow-500">FAQ</a>
+                    <a href="#kontak" class="text-gray-800 hover:text-yellow-500">Kontak</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center ml-auto">
+                    <button id="mobile-menu-button" class="focus:outline-none">
+                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#produk" class="block text-gray-800 py-2 px-4">Produk</a>
+            <a href="#tentang" class="block text-gray-800 py-2 px-4">Tentang Kami</a>
+            <a href="#testimoni" class="block text-gray-800 py-2 px-4">Testimoni</a>
+            <a href="#kantor" class="block text-gray-800 py-2 px-4">Kantor Cabang</a>
+            <a href="#kontak" class="block text-gray-800 py-2 px-4">Kontak</a>
+        </div>
+    </nav>
+
+    
+    <section class="relative h-screen overflow-hidden">
+        <div id="carouselSlides" class="flex flex-nowrap transition-transform duration-500 ease-out" style="transform: translateX(0%);">
+            <!-- Slide 1 -->
+            <div class="min-w-full h-screen bg-cover bg-center relative" style="background-image: url('./images/SoloFlossroll.jpg');">
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <h1 class="text-5xl font-bold mb-4">Solo Flossroll</h1>
+                        <p class="text-lg mb-8">Rasakan Kelezatan Autentik dari Kota Solo</p>
+                        <a href="#produk" class="bg-white text-yellow-500 px-6 py-3 rounded-md text-lg font-semibold hover:bg-gray-100 transition duration-300">Jelajahi Produk</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="min-w-full h-screen bg-cover bg-center relative" style="background-image: url('./images/gambar3.jpg');">
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <h1 class="text-5xl font-bold mb-4">Kelezatan Autentik Indonesia</h1>
+                        <p class="text-lg mb-8">Nikmati Kelezatan di Setiao Gigitannya</p>
+                        <a href="#produk" class="bg-white text-yellow-500 px-6 py-3 rounded-md text-lg font-semibold hover:bg-gray-100 transition duration-300">Lihat Lebih Lanjut</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="min-w-full h-screen bg-cover bg-center relative" style="background-image: url('./images/gambar2.jpg');">
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                    <div class="text-center text-white">
+                        <h1 class="text-5xl font-bold mb-4">Bawa Pulang Kenangan dari Indonesia</h1>
+                        <p class="text-lg mb-8">Oleh-Oleh Terbaik untuk Keluarga dan Teman</p>
+                        <a href="#produk" class="bg-white text-yellow-500 px-6 py-3 rounded-md text-lg font-semibold hover:bg-gray-100 transition duration-300">Mulai Berbelanja</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute inset-0 flex justify-between items-center px-4">
+            <button id="prevSlide" class="text-white text-3xl focus:outline-none">&#10094;</button>
+            <button id="nextSlide" class="text-white text-3xl focus:outline-none">&#10095;</button>
+        </div>
+    </section>
+  
+  
+    <section class="bg-gray-100 py-16" id="why-choose-us">
+        <div class="container mx-auto text-center px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Mengapa Memilih Produk Kami?</h2>
+            <p class="text-gray-600 mb-12 max-w-lg mx-auto">
+            Kami menawarkan produk oleh-oleh terbaik , dengan kualitas yang terjamin dan harga yang bersahabat. Berikut adalah alasan mengapa kami menjadi pilihan yang tepat untuk Anda.
+            </p>
+  
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Keunggulan 1 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <img src="./images/brand.png" alt="Icon Produk Berkualitas" class="w-20 h- mx-auto mb-4">
+                <h3 class="text-xl font-semibold text-yellow-500 mb-2">Produk Berkualitas</h3>
+                <p class="text-gray-600">
+                Semua produk kami dipilih dengan cermat untuk memastikan Anda mendapatkan kualitas terbaik dari setiap daerah di Indonesia.
+                </p>
+            </div>
+  
+            <!-- Keunggulan 2 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <img src="./images/dollar-coin.png" alt="Icon Produk Berkualitas" class="w-20 h-20 mx-auto mb-4">
+                <h3 class="text-xl font-semibold text-yellow-500 mb-2">Harga Terjangkau</h3>
+                <p class="text-gray-600">
+                Kami menawarkan harga yang kompetitif sehingga Anda bisa membawa pulang oleh-oleh tanpa khawatir biaya yang mahal.
+                </p>
+            </div>
+  
+            <!-- Keunggulan 3 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <img src="./images/distribution-center.png" alt="Icon Produk Berkualitas" class="w-20 h-20 mx-auto mb-4">
+                <h3 class="text-xl font-semibold text-yellow-500 mb-2">Ragam Produk Unik</h3>
+                <p class="text-gray-600">
+                Kami memiliki berbagai macam varian, sehingga Anda bisa menemukan oleh-oleh khas yang unik dan berbeda.
+                </p>
+            </div>
+        </div>
+    </section>
+  
+    
+    <section class="container mx-auto px-4 py-12" id="produk">
+        <h2 class="text-3xl font-bold text-center mb-8">Produk Pilihan Kami</h2>
+        <!-- Produk Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition duration-300">
+                <img src="./images/produk1.jpg" alt="Produk 1" class="w-full h-48 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold text-center">Flossroll Abon Ayam</h3>
+                <h3 class="text-xl text-center">Rp 25.000,00</h3>
+                <div class="flex justify-center mt-4">
+                    <button class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition duration-300">Lihat Produk</button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition duration-300">
+                <img src="./images/produk2.jpg" alt="Produk 2" class="w-full h-48 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold text-center">Flossroll Abon Ayam Pedas</h3>
+                <h3 class="text-xl text-center">Rp 25.000,00</h3>
+                <div class="flex justify-center mt-4">
+                    <button class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition duration-300">Lihat Produk</button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition duration-300">
+                <img src="./images/produk3.jpeg" alt="Produk 3" class="w-full h-48 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold text-center">Flossroll Abon Sapi</h3>
+                <h3 class="text-xl text-center">Rp 25.000,00</h3>
+                <div class="flex justify-center mt-4">
+                    <button class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition duration-300">Lihat Produk</button>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white rounded-lg shadow-md p-6 transform hover:scale-105 transition duration-300">
+                <img src="./images/produk4.jpg" alt="Produk 4" class="w-full h-48 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold text-center">Flossroll Abon Sapi Pedas</h3>
+                <h3 class="text-xl text-center">Rp 25.000,00</h3>
+                <div class="flex justify-center mt-4">
+                    <button class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition duration-300">Lihat Produk</button>
+                </div>
+            </div>
+    </section>
+    <!-- Button Lihat Selengkapnya -->
+    <div class="flex justify-center mt-8">
+        <button class="bg-yellow-500 text-white px-6 py-3 rounded hover:bg-yellow-600 transition duration-300">Lihat Selengkapnya</button>
+    </div>
+
+
+        
+    <section class="mt-12" id="testimoni">
+        <h2 class="text-3xl font-bold text-center mb-6">Testimoni Pelanggan</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Testimoni 1 -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                    <img src="./images/foto.jpeg" alt="Foto Agus Santoso" class="w-20 h-20 rounded-full mr-4">
+                    <div>
+                        <h4 class="text-lg font-bold">Agus Santoso</h4>
+                        <p class="text-gray-500">Jakarta</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">"Produk oleh-oleh ini sangat lezat dan berkualitas! Saya selalu membeli solo flossroll setiap berlibur ke solo."</p>
+                <!-- Rating Bintang -->
+                <div class="flex mt-4 text-yellow-500">
+                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                </div>
+            </div>
+        
+            <!-- Testimoni 2 -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                    <img src="./images/foto.jpeg" alt="Foto Dewi Puspita" class="w-20 h-20 rounded-full mr-4">
+                    <div>
+                        <h4 class="text-lg font-bold">Dewi Puspita</h4>
+                        <p class="text-gray-500">Bandung</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">"Pelayanan sangat cepat, dan pilihan variannya beragam. Abon gulung flossroll benar-benar favorit keluarga kami."</p>
+                <!-- Rating Bintang -->
+                <div class="flex mt-4 text-yellow-500">
+                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                </div>
+            </div>
+        
+            <!-- Testimoni 3 -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center mb-4">
+                    <img src="./images/foto.jpeg" alt="Foto Rina Wati" class="w-20 h-20 rounded-full mr-4">
+                    <div>
+                        <h4 class="text-lg font-bold">Rina Wati</h4>
+                        <p class="text-gray-500">Surabaya</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">"Abon gulung dari Solo yang saya pesan sampai dengan cepat dan rasanya sangat autentik. Terima kasih banyak!"</p>
+                <!-- Rating Bintang -->
+                <div class="flex mt-4 text-yellow-500">
+                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                </div>
+            </div>
+        </div>
+    </section>
+        
+
+    <!-- Kantor Cabang Section -->
+    <section class="mt-12" id="kantor">
+        <h2 class="text-3xl font-bold text-center mb-6">Outlet Cabang Kami</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Kantor 1 -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <img src="./images/perusahaan1.jpg" class="w-full h-40 object-cover rounded-md mb-4">
+                <h4 class="text-xl font-bold mb-4">Solo</h4>
+                <p class="text-gray-600">Jl. Merdeka No. 1, Solo</p>
+                <p class="text-gray-600">Telp: (021) 123-4567</p>
+                <button class="bg-yellow-500 text-white mt-4 px-4 py-2 rounded hover:bg-yellow-600 transition duration-300">Lihat Lokasi</button>
+            </div>
+
+            <!-- Kantor 2 -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <img src="./images/perusahaan2.jpg" alt="Produk 3" class="w-full h-40 object-cover rounded-md mb-4">
+                <h4 class="text-xl font-bold mb-4">Yogyakarta</h4>
+                <p class="text-gray-600">Jl. Malioboro No. 99, Yogyakarta</p>
+                <p class="text-gray-600">Telp: (0274) 987-6543</p>
+                <button class="bg-yellow-500 text-white mt-4 px-4 py-2 rounded hover:bg-yellow-600 transition duration-300">Lihat Lokasi</button>
+            </div>
+
+            <!-- Kantor 3 -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <img src="./images/perusahaan3.jpg" alt="Produk 3" class="w-full h-40 object-cover rounded-md mb-4">
+                <h4 class="text-xl font-bold mb-4">Surabaya</h4>
+                <p class="text-gray-600">Jl. Tunjungan No. 123, Surabaya</p>
+                <p class="text-gray-600">Telp: (031) 456-7890</p>
+                <button class="bg-yellow-500 text-white mt-4 px-4 py-2 rounded hover:bg-yellow-600 transition duration-300">Lihat Lokasi</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Q&A Section -->
+    <section id="qna" class=" py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-8">Pertanyaan Umum</h2>
+
+        <!-- Q&A Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Pertanyaan dan Jawaban -->
+            <div class="border-b border-gray-300 pb-2">
+                <details class="group">
+                    <summary class="flex justify-between items-center cursor-pointer p-4 rounded-lg bg-gray-100 text-lg font-semibold text-gray-800 group-hover:bg-gray-200">
+                        Dimanakah bisa mencari outlet Solo Flossroll?
+                        <span class="transform group-open:rotate-90 transition-transform">›</span>
+                    </summary>
+                    <div class="mt-2 px-4 text-gray-700">
+                        Anda dapat mencari outlet Solo Flossroll di beberapa lokasi strategis seperti Solo, Yogyakarta, dan Surabaya.
+                    </div>
+                </details>
+            </div>
+
+            <div class="border-b border-gray-300 pb-2">
+                <details class="group">
+                    <summary class="flex justify-between items-center cursor-pointer p-4 rounded-lg bg-gray-100 text-lg font-semibold text-gray-800 group-hover:bg-gray-200">
+                        Apa saja produk yang dijual Solo Flossroll?
+                        <span class="transform group-open:rotate-90 transition-transform">›</span>
+                    </summary>
+                    <div class="mt-2 px-4 text-gray-700">
+                        Kami menjual berbagai macam varian produk abon gulung
+                    </div>
+                </details>
+            </div>
+
+            <!-- Q&A Lainnya -->
+            <div class="border-b border-gray-300 pb-2">
+                <details class="group">
+                    <summary class="flex justify-between items-center cursor-pointer p-4 rounded-lg bg-gray-100 text-lg font-semibold text-gray-800 group-hover:bg-gray-200">
+                        Bisakah saya memesan produk solo flossroll via online?
+                        <span class="transform group-open:rotate-90 transition-transform">›</span>
+                    </summary>
+                    <div class="mt-2 px-4 text-gray-700">
+                        Ya, Anda bisa memesan produk kami secara online melalui website atau aplikasi e-commerce partner kami.
+                    </div>
+                </details>
+            </div>
+
+            <div class="border-b border-gray-300 pb-2">
+                <details class="group">
+                    <summary class="flex justify-between items-center cursor-pointer p-4 rounded-lg bg-gray-100 text-lg font-semibold text-gray-800 group-hover:bg-gray-200">
+                        Pembayaran saat pembelian produk Solo Flossroll bisa lewat apa saja?
+                        <span class="transform group-open:rotate-90 transition-transform">›</span>
+                    </summary>
+                    <div class="mt-2 px-4 text-gray-700">
+                        Kami menerima pembayaran melalui berbagai metode seperti transfer bank, kartu kredit, dan dompet digital.
+                    </div>
+                </details>
+            </div>
+
+            <div class="border-b border-gray-300 pb-2">
+                <details class="group">
+                    <summary class="flex justify-between items-center cursor-pointer p-4 rounded-lg bg-gray-100 text-lg font-semibold text-gray-800 group-hover:bg-gray-200">
+                        Pukul berapa Solo Flossroll buka?
+                        <span class="transform group-open:rotate-90 transition-transform">›</span>
+                    </summary>
+                    <div class="mt-2 px-4 text-gray-700">
+                        Jam operasional kami adalah dari pukul 08.00 hingga 22.00, tergantung pada lokasi outlet.
+                    </div>
+                </details>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    </section>
+
+
+    <footer class="bg-gray-900 text-white py-10 w-full">
+    <div class="container mx-auto px-6 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left justify-items-center md:justify-items-start">
+            <!-- About Section -->
+            <div class="flex flex-col items-center md:items-start">
+                <h2 class="text-lg font-semibold mb-4">Tentang Kami</h2>
+                <p class="text-gray-400 max-w-xs">
+                    Kami adalah toko oleh-oleh yang menyediakan berbagai macam produk yaitu abon gulung dengan berbagai macam varian. Temukan cita rasa dan keunikan dari setiap daerah hanya di sini.
+                </p>
+            </div>
+
+            <div class="flex flex-col items-center md:items-start px-20">
+                <h2 class="text-lg font-semibold mb-4">Tautan Cepat</h2>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="#produk" class="hover:text-white transition">Produk</a></li>
+                    <li><a href="#qna" class="hover:text-white transition">FAQ</a></li>
+                    <li><a href="#testimoni" class="hover:text-white transition">Testimoni</a></li>
+                    <li><a href="#kontak" class="hover:text-white transition">Kontak Kami</a></li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col items-center md:items-start px-20">
+                <h2 class="text-lg font-semibold mb-4">Ikuti Kami</h2>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-facebook-f"></i> 
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram"></i> 
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter"></i> 
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-youtube"></i> 
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+            <p class="text-gray-400">&copy; 2024 Solo Flossroll. All Rights Reserved.</p>
+        </div>
+    </div>
+    </footer>
+
+   
+    <script>
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const carousel = document.getElementById('carouselSlides');
+        const totalSlides = carousel.children.length;
+        let currentIndex = 0;
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function toggleAnswer(index) {
+        const answer = document.getElementById(`answer-${index}`);
+        const arrow = document.getElementById(`arrow-${index}`);
+        
+        answer.classList.toggle('hidden');
+        
+        arrow.classList.toggle('rotate-180');
+        }
+        function showSlide(index) {
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        }
+  
+        document.getElementById('nextSlide').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+        });
+  
+        document.getElementById('prevSlide').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(currentIndex);
+        });
+  
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            showSlide(currentIndex);
+        }, 5000);
+    
+    </script>
+
+
+</body>
+</html>

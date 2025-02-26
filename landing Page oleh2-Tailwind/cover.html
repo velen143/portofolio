@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-red-900 font-sans">
+
+    <!-- Web View -->
+    <div class="hidden md:flex flex-col items-center min-h-screen">
+        <div class="relative w-full max-w-6xl p-6 bg-red-900 bg-opacity-70" style="background-image: url('/path-to-your-background.png'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="relative z-10 text-center py-16">
+                <h1 class="text-5xl text-white font-bold">Randi & Shani</h1>
+                <p class="text-xl text-gray-300 mt-4">Kepada Yth</p>
+                <p class="text-2xl text-white font-semibold mb-6">Nama Tamu</p>
+                <a href="#" class="bg-yellow-500 text-black font-semibold py-2 px-6 rounded-lg shadow-md">Buka Undangan</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile View -->
+    <div class="md:hidden flex flex-col items-center min-h-screen">
+        <div class="relative w-full h-screen p-6 flex items-center justify-center bg-cover bg-center" style="background-image: url('/path-to-your-cover-image.png');">
+            <div class="absolute inset-0 bg-black opacity-40"></div>
+            <div class="relative z-10 text-center">
+                <h1 class="text-4xl text-white font-bold">Randi & Shani</h1>
+                <p class="text-lg text-gray-300 mt-4">Kepada Yth</p>
+                <p class="text-xl text-white font-semibold mb-6">Nama Tamu</p>
+                <a href="#" class="bg-yellow-500 text-black font-semibold py-2 px-4 rounded-lg shadow-md">Buka Undangan</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
